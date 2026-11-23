@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#eef5ff" />
+  <meta name="description" content="Software Development & Tech Stack Capabilities — A Complete Menu of Platforms, Frameworks, Cloud & Integrations." />
+  <title>Software Development &amp; Tech Stack Capabilities</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Ambient Blue, White & Orange Glass Depth Canvas -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-orb orb-blue-lg"></div>
+    <div class="ambient-orb orb-orange-md"></div>
+    <div class="ambient-orb orb-sky-md"></div>
+    <div class="ambient-orb orb-orange-sm"></div>
+    <div class="ambient-orb orb-blue-bottom"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- Sticky Frosted Glass Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-floating-banner">
+        <!-- Contact Strip inside Floating Banner -->
+        <div class="header-contact-strip" aria-label="Direct contact information">
+          <span class="contact-strip-label">
+            <span class="contact-live-dot" aria-hidden="true"></span>
+            <span>Direct Contact</span>
+          </span>
+          <div class="contact-strip-links">
+            <a href="mailto:mmabejar@gmail.com" class="contact-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span class="contact-pill-key">Email:</span>
+              <span>mmabejar@gmail.com</span>
+            </a>
+            <a href="tel:09275196273" class="contact-pill contact-pill-orange">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span class="contact-pill-key">Mobile:</span>
+              <span>09275196273</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Primary Navigation Row -->
+        <div class="header-inner">
+          <a href="#top" class="brand" aria-label="Back to top">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-title">Stack Menu</span>
+              <span class="brand-sub">Engineering Capabilities</span>
+            </span>
+          </a>
+
+          <nav class="desktop-nav" aria-label="Primary navigation">
+            <a href="#platforms" class="nav-link" data-section="platforms">Platforms</a>
+            <a href="#buffet" class="nav-link" data-section="buffet">Tech Buffet</a>
+            <a href="#connect" class="nav-link" data-section="connect">Goal Matcher</a>
+            <a href="#strengths" class="nav-link" data-section="strengths">Strengths</a>
+          </nav>
+
+          <div class="header-actions">
+            <button type="button" class="plate-trigger glass-btn-pill" id="header-plate-btn" aria-haspopup="dialog" aria-controls="plate-drawer">
+              <span class="plate-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
+                  <path d="m2 17 10 5 10-5"/>
+                  <path d="m2 12 10 5 10-5"/>
+                </svg>
+              </span>
+              <span class="plate-label">Stack Plate</span>
+              <span class="plate-badge" id="header-plate-count">0</span>
+            </button>
+
+            <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+              <span class="hamburger-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Glass Menu -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" hidden>
+      <div class="container">
+        <nav class="mobile-nav-card glass-surface" aria-label="Mobile navigation">
+          <a href="#platforms" class="mobile-nav-link" data-section="platforms">
+            <span class="mobile-nav-num">01</span>
+            <span>Platforms We Build</span>
+          </a>
+          <a href="#buffet" class="mobile-nav-link" data-section="buffet">
+            <span class="mobile-nav-num">02</span>
+            <span>The Tech Stack Buffet</span>
+          </a>
+          <a href="#connect" class="mobile-nav-link" data-section="connect">
+            <span class="mobile-nav-num">03</span>
+            <span>How to Spot What Connects</span>
+          </a>
+          <a href="#strengths" class="mobile-nav-link" data-section="strengths">
+            <span class="mobile-nav-num">04</span>
+            <span>Core Engineering Strengths</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow-pill glass-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Full-Spectrum Engineering Menu</span>
+          </div>
+
+          <h1 class="hero-title">
+            Software Development &amp; <span class="text-gradient">Tech Stack Capabilities</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            A Complete Menu of Platforms, Frameworks, Cloud &amp; Integrations
+          </p>
+
+          <p class="hero-lead">
+            Whether you are launching a web app, scaling a mobile product, modernizing legacy systems, or building custom AI/data workflows, we treat our engineering stack like a buffet—pick the exact platforms, frameworks, and integrations that fit your roadmap, timeline, and business goals.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#buffet" class="btn btn-orange">
+              <span>Explore the Tech Buffet</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="#connect" class="btn btn-glass-blue">
+              <span>Match Your Goal</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Glass Showcase Card -->
+        <aside class="hero-visual reveal" aria-label="Capabilities overview">
+          <div class="hero-glass-card glass-surface-strong">
+            <div class="hero-card-header">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot-blue"></span>
+                <span class="dot-sky"></span>
+                <span class="dot-orange"></span>
+              </div>
+              <span class="mono-tag">interactive-buffet.blueprint</span>
+            </div>
+
+            <div class="hero-metrics-grid">
+              <div class="metric-tile">
+                <span class="metric-value text-blue">06</span>
+                <span class="metric-label">Platform Domains</span>
+              </div>
+              <div class="metric-tile">
+                <span class="metric-value text-orange" id="stat-tech-count">85+</span>
+                <span class="metric-label">Stack Technologies</span>
+              </div>
+              <div class="metric-tile">
+                <span class="metric-value text-blue">05</span>
+                <span class="metric-label">Goal Blueprints</span>
+              </div>
+              <div class="metric-tile">
+                <span class="metric-value text-orange">E2E</span>
+                <span class="metric-label">Delivery Ownership</span>
+              </div>
+            </div>
+
+            <div class="hero-buffet-tip">
+              <div class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/>
+                </svg>
+              </div>
+              <div class="tip-body">
+                <strong>Build Your Custom Stack Plate</strong>
+                <p>Tap any platform, tech chip, or goal preset below to assemble &amp; copy a tailored architecture brief.</p>
+              </div>
+            </div>
+
+            <div class="hero-quick-presets">
+              <span class="quick-label">Quick-load a goal preset:</span>
+              <div class="quick-preset-row" id="hero-quick-presets"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 1: Platforms We Build -->
+    <section class="content-section" id="platforms" aria-labelledby="platforms-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <span class="section-num">01</span>
+            <span class="section-tag">Any Target, Any Scale</span>
+          </div>
+          <h2 id="platforms-heading" class="section-title">Platforms We Build</h2>
+          <p class="section-desc">
+            From customer-facing SaaS and offline-first mobile apps to mission-critical enterprise extensions and AI-driven pipelines. Tap any platform to include it on your Stack Plate.
+          </p>
+        </div>
+
+        <div class="platforms-grid" id="platforms-grid"></div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Tech Stack Buffet -->
+    <section class="content-section" id="buffet" aria-labelledby="buffet-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <span class="section-num section-num-orange">02</span>
+            <span class="section-tag">Easy to Scan &amp; Connect</span>
+          </div>
+          <h2 id="buffet-heading" class="section-title">The Tech Stack Buffet</h2>
+          <p class="section-desc">
+            Filter by layer or search across languages, frameworks, databases, cloud infrastructure, and third-party ecosystems. Tap any technology pill to add it to your blueprint.
+          </p>
+        </div>
+
+        <!-- Interactive Buffet Controls -->
+        <div class="buffet-controls glass-surface reveal">
+          <div class="buffet-tabs-wrapper">
+            <div class="buffet-tabs" id="buffet-tabs" role="tablist" aria-label="Technology stack categories"></div>
+          </div>
+
+          <div class="buffet-search-row">
+            <div class="search-field">
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </span>
+              <input
+                type="search"
+                id="buffet-search"
+                class="search-input"
+                placeholder="Search React, PostgreSQL, Stripe, AWS, GraphQL..."
+                autocomplete="off"
+                aria-label="Search technologies in the stack buffet"
+              />
+              <button type="button" id="buffet-search-clear" class="search-clear-btn" aria-label="Clear search" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="buffet-meta">
+              <span class="match-count" id="buffet-match-count">Showing all items</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buffet Cards Container -->
+        <div class="buffet-grid" id="buffet-grid" aria-live="polite"></div>
+
+        <!-- Empty Search State -->
+        <div class="empty-state glass-surface" id="buffet-empty" hidden>
+          <p class="empty-title">No matching stack items found</p>
+          <p class="empty-sub">Try clearing your search or switching back to <strong>All Categories</strong>.</p>
+          <button type="button" class="btn btn-glass-blue btn-sm" id="buffet-reset-btn">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: How to Spot What Connects to Your Needs -->
+    <section class="content-section" id="connect" aria-labelledby="connect-heading">
+      <div class="container">
+        <div class="section-header section-header-split reveal">
+          <div>
+            <div class="section-kicker">
+              <span class="section-num">03</span>
+              <span class="section-tag">Goal-to-Stack Blueprints</span>
+            </div>
+            <h2 id="connect-heading" class="section-title">How to Spot What Connects to Your Needs</h2>
+            <p class="section-desc">
+              Select a business objective to inspect the recommended stack combination and typical deliverable—or compare all five blueprints side by side.
+            </p>
+          </div>
+
+          <div class="view-toggle glass-surface" role="group" aria-label="Goal matcher view mode">
+            <button type="button" class="toggle-btn is-active" id="view-interactive-btn" aria-pressed="true">
+              Interactive Matcher
+            </button>
+            <button type="button" class="toggle-btn" id="view-matrix-btn" aria-pressed="false">
+              Full Matrix
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Goal Matcher View -->
+        <div class="goal-matcher-view reveal" id="goal-matcher-view">
+          <div class="goal-selector-list" id="goal-selector-list" role="tablist" aria-label="Select your project goal"></div>
+          <div class="goal-detail-panel glass-surface-strong" id="goal-detail-panel" role="tabpanel" aria-live="polite"></div>
+        </div>
+
+        <!-- Full Comparison Matrix View -->
+        <div class="goal-matrix-view" id="goal-matrix-view" hidden>
+          <div class="matrix-glass-wrap glass-surface-strong">
+            <table class="goal-table">
+              <thead>
+                <tr>
+                  <th scope="col">If Your Goal Is...</th>
+                  <th scope="col">Look at These Stack Items</th>
+                  <th scope="col">Typical Deliverable</th>
+                  <th scope="col" class="col-action">Action</th>
+                </tr>
+              </thead>
+              <tbody id="goal-table-body"></tbody>
+            </table>
+          </div>
+          <!-- Touch-optimized Mobile Cards for Matrix View -->
+          <div class="matrix-mobile-cards" id="matrix-mobile-cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Core Engineering & Delivery Strengths -->
+    <section class="content-section" id="strengths" aria-labelledby="strengths-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">
+            <span class="section-num section-num-orange">04</span>
+            <span class="section-tag">Execution Philosophy</span>
+          </div>
+          <h2 id="strengths-heading" class="section-title">Core Engineering &amp; Delivery Strengths</h2>
+          <p class="section-desc">
+            Tools are only half the equation. Here is how we architect, integrate, and ship systems built to last.
+          </p>
+        </div>
+
+        <div class="strengths-grid" id="strengths-grid"></div>
+      </div>
+    </section>
+
+    <!-- Interactive Closing Glass Callout -->
+    <section class="cta-section" aria-label="Your curated stack brief">
+      <div class="container">
+        <div class="cta-glass-banner glass-surface-strong reveal">
+          <div class="cta-glow-blue" aria-hidden="true"></div>
+          <div class="cta-glow-orange" aria-hidden="true"></div>
+          <div class="cta-content">
+            <span class="eyebrow-pill glass-pill">Ready to Combine Your Stack?</span>
+            <h2 class="cta-title">Turn Your Selected Buffet Into a Concrete Engineering Roadmap</h2>
+            <p class="cta-text" id="cta-plate-status">
+              Pick platforms and technologies anywhere on this page—or load a Goal Preset—to generate a clean, shareable stack brief in one tap.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-orange" id="cta-open-plate-btn">
+              <span>Review My Stack Plate</span>
+              <span class="btn-count-pill" id="cta-plate-count">0</span>
+            </button>
+            <a href="#buffet" class="btn btn-glass-blue">Browse Full Buffet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimalist Frosted Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner glass-surface">
+      <div class="footer-brand">
+        <strong>Software Development &amp; Tech Stack Capabilities</strong>
+        <span>Platforms, Frameworks, Cloud &amp; Integrations Menu</span>
+      </div>
+      <div class="footer-links">
+        <a href="#platforms">Platforms</a>
+        <a href="#buffet">Tech Buffet</a>
+        <a href="#connect">Goal Matcher</a>
+        <a href="#strengths">Strengths</a>
+        <a href="https://crm.mna369.com/" target="_blank" rel="noopener noreferrer">CRM Essentials</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bottom Quick-Bar -->
+  <div class="mobile-floating-bar" id="mobile-floating-bar" aria-label="Quick mobile controls">
+    <a href="#buffet" class="mobile-bar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+      </svg>
+      <span>Buffet</span>
+    </a>
+    <a href="#connect" class="mobile-bar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+      </svg>
+      <span>Matcher</span>
+    </a>
+    <button type="button" class="mobile-bar-plate-btn" id="mobile-plate-btn" aria-haspopup="dialog" aria-controls="plate-drawer">
+      <span>My Stack Plate</span>
+      <span class="plate-badge" id="mobile-plate-count">0</span>
+    </button>
+  </div>
+
+  <!-- Interactive Stack Plate Slide-Over / Mobile Bottom Sheet Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside
+    class="plate-drawer glass-surface-strong"
+    id="plate-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="plate-drawer-title"
+    aria-hidden="true"
+  >
+    <div class="drawer-drag-zone" id="drawer-drag-zone" aria-hidden="true">
+      <span class="drawer-drag-handle"></span>
+    </div>
+
+    <div class="drawer-header">
+      <div>
+        <span class="drawer-eyebrow">Custom Engineering Blueprint</span>
+        <h2 id="plate-drawer-title" class="drawer-title">My Stack Plate</h2>
+      </div>
+      <button type="button" class="icon-close-btn" id="drawer-close-btn" aria-label="Close Stack Plate">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="drawer-body"></div>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn btn-orange btn-block" id="drawer-copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span>Copy Stack Brief</span>
+      </button>
+      <button type="button" class="btn btn-ghost-danger" id="drawer-clear-btn">Clear</button>
+    </div>
+  </aside>
+
+  <!-- Live Toast Feedback -->
+  <div class="toast-container" id="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
